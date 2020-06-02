@@ -1,0 +1,6 @@
+name: ExpandIsland
+version: ${project.version}
+main: cn.mcdawncity.expandisland.ExpandIsland
+api-version: 1.13
+softdepend: [Vault, CMI, PlaceholderAPI]
+authors: [Mical]
