@@ -1,0 +1,5 @@
+Plugin:
+  Prefix: "&9&lExpandIsland"
+  INFO: "&a>> "
+  WARN: "&e>> "
+  ERROR: "&c>> "

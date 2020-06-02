@@ -2,7 +2,6 @@ package cn.mcdawncity.expandisland.utils;
 
 import org.serverct.parrot.parrotx.PPlugin;
 import org.serverct.parrot.parrotx.config.PConfig;
-import org.serverct.parrot.parrotx.hooks.VaultUtil;
 import org.serverct.parrot.parrotx.utils.I18n;
 
 import java.io.File;

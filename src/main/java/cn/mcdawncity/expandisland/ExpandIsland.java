@@ -1,5 +1,6 @@
 package cn.mcdawncity.expandisland;
 
+import cn.mcdawncity.expandisland.listener.SelectionListener;
 import cn.mcdawncity.expandisland.utils.Configuration;
 import org.bukkit.Bukkit;
 import org.serverct.parrot.parrotx.PPlugin;
@@ -35,6 +36,11 @@ public final class ExpandIsland extends PPlugin {
         vaultUtil = new VaultUtil(this, true);
         if (!vaultUtil.isHooks())
             Bukkit.getPluginManager().disablePlugin(this);
-        getLogger().info("正在使用模式");
+        getLogger().info("插件已加载");
+    }
+
+    @Override
+    protected void registerListener() {
+        Bukkit.getPluginManager().registerEvents(new SelectionListener(), this);
     }
 }
