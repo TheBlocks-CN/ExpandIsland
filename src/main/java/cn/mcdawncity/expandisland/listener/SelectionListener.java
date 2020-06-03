@@ -20,7 +20,7 @@ public class SelectionListener implements Listener {
     @EventHandler
     public void onBlockBreak(PlayerInteractEvent event){
         PPlugin plugin = ExpandIsland.getInstance();
-        if (event.getItem() != null && event.getItem().equals(Material.WOODEN_SWORD)){
+        if (event.getItem() != null && event.getItem().getType().equals(Material.WOODEN_SWORD)){
             Block block = event.getClickedBlock();
             if (block != null){
                 event.setCancelled(true);
@@ -29,7 +29,7 @@ public class SelectionListener implements Listener {
                 UUID uuid = user.getUniqueId();
                 if (event.getAction() == Action.LEFT_CLICK_BLOCK){
                     TempStorage.getTempPos1().put(uuid, location);
-                    I18n.send(user, plugin.lang.build(plugin.localeKey, I18n.Type.INFO, "已选择点1(" + BasicUtil.formatLocation(location) + "&7"));
+                    I18n.send(user, plugin.lang.build(plugin.localeKey, I18n.Type.INFO, "已选择点1(" + BasicUtil.formatLocation(location) + "&7)"));
                 } else if (event.getAction() == Action.RIGHT_CLICK_BLOCK){
                     TempStorage.getTempPos2().put(uuid, location);
                     I18n.send(user, plugin.lang.build(plugin.localeKey, I18n.Type.INFO, "已选择点2(" + BasicUtil.formatLocation(location) + "&7)"));
